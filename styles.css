@@ -42,6 +42,15 @@ h1 {
   font-family: "Cinzel", serif; /* Add a luxury serif font */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+h2 {
+  font-size: 2em;
+  margin: 0;
+  background: linear-gradient(90deg, gold, rgb(34, 33, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Cinzel", serif; /* Add a luxury serif font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 p {
   font-size: 1.5em;
@@ -51,8 +60,8 @@ p {
 .socials {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  margin-bottom: 50px;
 }
 .socials img {
   height: 40px;
@@ -184,6 +193,13 @@ p {
 .wallet h1 {
   font-size: 20px;
 }
+.mobile {
+  display: none;
+}
+.data {
+  display: flex;
+  gap: 20px;
+}
 
 @media screen and (max-width: 766px) {
   .supply {
@@ -193,10 +209,23 @@ p {
     align-items: center;
     gap: 0;
   }
+  .data {
+    display: none;
+  }
   .supply h1 {
     font-size: 12px;
   }
   .wallet h1 {
     font-size: 12px;
+  }
+  .socials {
+    flex-direction: column;
+  }
+  .content {
+    padding-top: 50px;
+  }
+  .mobile {
+    display: flex;
+    gap: 10px;
   }
 }
