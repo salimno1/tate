@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <div class="banner">
+
+
+
+
+        <div class="overlay">
+
+            <div class="content">
+
+                <h1>$GENIUS</h1>
+                <div class="socials">
+
+                    <a href="https://x.com/GENIUS_onSol" target="_blank" class="hoverp">
+                        <img src="./pics/x.png" alt="">
+                    </a> <a href="https://t.me/GENIUS_onSol" target="_blank" class="hoverp">
+                        <img src="./pics/tg.webp" alt="">
+                    </a>
+                    <a href="" target="_blank" class="hoverp">
+                        <img src="./pics/dex.png" alt="">
+                    </a>
+                    </a> <a href="" target="_blank" class="hoverp">
+                        <img src="./pics/dextools-logo-4EDDD2DF98-seeklogo.com.png" alt="">
+                    </a>
+
+
+                </div>
+
+
+            </div>
+            <div class="footer">
+                <div class="info">
+                    <div class="ca">
+                        <h1>pump.fun</h1>
+                    </div>
+                    <div class="supply">
+                        <h1>1B supply </h1>
+                        <h1> 100% liquidity locked</h1>
+                        <h1> 0% tax, mint revoked</h1>
+                    </div>
+
+
+                </div>
+                <div class="footer1"><a href="https://www.jointherealworld.com/checkout?a=p86p7wfnzd&subid=portal"
+                        class="button">Enter
+                        TRW</a>
+                    <a href="https://www.cobratate.com/pledge" class="button">Donation</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DRfOyy5GJrE?si=ggu-62lpxtYU9YQB"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const backgroundAudio = document.getElementById('backgroundAudio');
+                const audioControlBtn = document.getElementById('audioControlBtn');
+
+                // Function to toggle audio playback
+                function toggleAudio() {
+                    if (backgroundAudio.paused) {
+                        backgroundAudio.play();
+                        audioControlBtn.textContent = 'Sound Off';
+                    } else {
+                        backgroundAudio.pause();
+                        audioControlBtn.textContent = 'Sound On';
+                    }
+                }
+
+                // Play audio when user interacts with the page (e.g., clicks anywhere)
+                document.addEventListener('click', function playAudioOnce() {
+                    backgroundAudio.play();
+                    audioControlBtn.textContent = 'Sound Off';
+                    document.removeEventListener('click', playAudioOnce); // Remove listener after first interaction
+                });
+
+                // Event listener for when audio playback ends
+                backgroundAudio.addEventListener('ended', () => {
+                    backgroundAudio.pause();
+                    audioControlBtn.textContent = 'Sound On'; // Update button text
+                });
+
+                // Toggle audio when button is clicked
+                audioControlBtn.addEventListener('click', toggleAudio);
+
+                // Modal functionality (if needed)
+                const modal = document.getElementById('myModal');
+                const span = document.getElementsByClassName('close')[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = 'none';
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            });
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>
