@@ -176,6 +176,14 @@ p {
   font-family: "Cinzel", serif; /* Add a luxury serif font */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+.wallet {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.wallet h1 {
+  font-size: 20px;
+}
 
 @media screen and (max-width: 766px) {
   .supply {
@@ -186,6 +194,9 @@ p {
     gap: 0;
   }
   .supply h1 {
+    font-size: 12px;
+  }
+  .wallet h1 {
     font-size: 12px;
   }
 }
